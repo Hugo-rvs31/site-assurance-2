@@ -1,0 +1,241 @@
+header {
+    display: flex;
+    flex-direction: column;
+
+    .nav-1 {
+        font-size: 0.9rem;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1700px;
+        width: 100%;
+        border-bottom: 1px solid $greylight;
+
+        @media screen and (max-width: 930px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 35px;
+        }
+
+        .logo {
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            @include center-element;
+            gap: 4px;
+            object-fit: cover;
+
+            @media screen and (max-width: 930px) {
+                width: 40%;
+                padding: 0;
+            }
+            img {
+                height: 40px;
+                width: 70px;
+                border-radius: 300px;
+                cursor: pointer;
+
+                @media screen and (max-width: 930px) {
+                    height: 120px;
+                    width: 250px;
+                }
+            }
+
+            p {
+                font-size: 0.6rem;
+                font-weight: bold;
+                text-align: center;
+
+                @media screen and (max-width: 930px) {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: 930px) {
+                font-size: 1.2rem;
+            }
+
+            li {
+                padding: 0 10px;
+                border-right: 1px solid $greylight;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 0.9rem;
+                }
+            }
+
+            li:first-child {
+                font-weight: bold;
+            }
+
+            li:last-child {
+                border-right: none;
+            }
+        }
+
+        .third-div {
+            display: flex;
+            align-items: center;
+            color: $blue1;
+
+            @media screen and (max-width: 930px) {
+                width: 80%;
+                justify-content: space-evenly;
+            }
+
+            @media screen and (max-width: 410px) {
+                flex-direction: column;
+            }
+
+            .little-text {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-right: 30px;
+                cursor: pointer;
+
+                @media screen and (max-width: 410px) {
+                    margin: 0;
+                }
+
+                &:hover {
+                    color: $bluelight;
+                }
+            }
+
+            .button-blue {
+                padding-right: 40px;
+                display: flex;
+                align-items: center;
+
+                @media screen and (max-width: 410px) {
+                    padding: 0;
+                    margin-top: 20px;
+                }
+
+                button {
+                    font-weight: bold;
+                    border-radius: 10px;
+                    padding: 7px 13px;
+                    text-align: left;
+                    font-size: 0.7rem;
+                    height: 40px;
+
+                    @media screen and (max-width: 600px) {
+                        font-size: 0.5rem;
+                    }
+
+                    @media screen and (max-width: 410px) {
+                        text-align: center;
+                    }
+                }
+
+                button:first-child {
+                    background: $blue1;
+                    color: white;
+                    margin-right: 20px;
+                    position: relative;
+
+                    &:hover {
+                        background: rgb(19, 108, 241);
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 1.5px;
+                        color: $greylight;
+                        background: $greylight;
+                        height: 100%;
+                        right: -21px;
+                        transform: translateY(-48%);
+                    }
+                }
+
+                button:last-child {
+                    border: 2px solid $blue1;
+                    margin-left: 20px;
+                    color: $blue1;
+
+                    &:hover {
+                        background: rgb(19, 108, 241);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-2 {
+        display: flex;
+        align-items: center;
+        height: 95px;
+        border-bottom: 1px solid $greylight;
+
+        @media screen and (max-width: 930px) {
+            height: 360px;
+        }
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            width: 100%;
+            font-size: 1rem;
+
+            @media screen and (max-width: 930px) {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            li {
+                
+                position: relative;
+
+                @media screen and (max-width: 930px) {
+                    height: 40px;
+                    font-size: 1.2rem;
+                    margin-top: 7px;
+                    border: 1px dashed rgba(108, 206, 236, 0.815);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    color: $blue1;
+                    background: $blue1;
+                    width: 100%;
+                    bottom: 0;
+                    opacity: 0;
+
+                    @media screen and (max-width: 930px) {
+                        display: none;
+                    }
+                }
+
+                &:hover:before {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    background-color: rgba(152, 199, 243, 0.753);
+                }
+            }
+        }
+    }
+}

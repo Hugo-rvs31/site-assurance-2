@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "main-font";
+    src: url(/assets/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+$black1: rgb(36, 35, 35);
+$blue1: #007ab3;
+$bluelight: #60bbe6;
+$greenlight: rgb(223,238,222);
+$greendark: rgb(64,125,113);
+$greylight: #80808030 ; 
+$orange: rgb(255,147,79);
+$main-font: main-font, sans-serif ;
+
+@mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $blue1;
+    }
+}
+
+body {
+    height: 100vh;
+    font-family: $main-font;
+
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+img {
+    object-fit: cover;
+}
